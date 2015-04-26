@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/test/java=UTF-8
+encoding//src/test/java/jdk/Enum=gbk
+encoding//src/test/java/jdk/annotation=gbk
+encoding//src/test/java/jdk/file/File5.java=GBK
+encoding//src/test/java/jdk/file/TestDeleteFile.java=GBK
+encoding//src/test/java/jdk/file/TestFile.java=GBK
+encoding//src/test/java/jdk/file/TestFile2.java=GBK
+encoding//src/test/java/jdk/file/TestFile3.java=GBK
+encoding//src/test/java/jdk/file/TestFile4.java=GBK
+encoding//src/test/java/jdk/file/TestFileFilter.java=GBK
+encoding//src/test/java/jdk/io=GBK
+encoding//src/test/java/jdk/io/IOUtils.java=GBK
+encoding//src/test/java/org/apache/commons/lang3/ToStringBuilderTest.java=gbk
+encoding/<project>=UTF-8

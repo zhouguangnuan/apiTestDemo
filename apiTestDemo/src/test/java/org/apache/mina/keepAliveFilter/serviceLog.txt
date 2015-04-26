@@ -1,0 +1,70 @@
+2015-02-05 17:07:35 [main] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - 服务器开启，监听端口：8889
+2015-02-05 17:07:40 [NioProcessor-3] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - CREATED
+2015-02-05 17:07:40 [NioProcessor-3] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - OPENED
+2015-02-05 17:07:40 [NioProcessor-3] [org.apache.mina.filter.executor.OrderedThreadPoolExecutor] [DEBUG] - Adding event SESSION_OPENED to session 2
+Queue : [SESSION_OPENED, ]
+
+2015-02-05 17:07:40 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Firing a SESSION_OPENED event for session 2
+2015-02-05 17:07:40 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Event SESSION_OPENED has been fired for session 2
+2015-02-05 17:07:40 [NioProcessor-3] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - RECEIVED: HeapBuffer[pos=0 lim=25 cap=1024: E5 BF 83 E8 B7 B3 E6 B6 88 E6 81 AF E6 B5 8B E8...]
+2015-02-05 17:07:40 [NioProcessor-3] [org.apache.mina.filter.executor.OrderedThreadPoolExecutor] [DEBUG] - Adding event MESSAGE_RECEIVED to session 2
+Queue : [MESSAGE_RECEIVED, ]
+
+2015-02-05 17:07:40 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Firing a MESSAGE_RECEIVED event for session 2
+2015-02-05 17:07:40 [pool-1-thread-1] [org.apache.mina.filter.codec.ProtocolCodecFilter] [DEBUG] - Processing a MESSAGE_RECEIVED for session 2
+2015-02-05 17:07:40 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isRequest（不是心跳包）： 心跳消息测试开始
+2015-02-05 17:07:40 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isResponse（不是心跳包）：心跳消息测试开始
+2015-02-05 17:07:40 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isRequest（不是心跳包）： 心跳消息测试开始
+2015-02-05 17:07:40 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isResponse（不是心跳包）：心跳消息测试开始
+2015-02-05 17:07:40 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatServerHandler] [INFO] - service messageReceived:  心跳消息测试开始
+2015-02-05 17:07:40 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Event MESSAGE_RECEIVED has been fired for session 2
+2015-02-05 17:07:55 [NioProcessor-3] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - IDLE
+2015-02-05 17:07:55 [NioProcessor-3] [org.apache.mina.filter.executor.OrderedThreadPoolExecutor] [DEBUG] - Adding event SESSION_IDLE to session 2
+Queue : [SESSION_IDLE, ]
+
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Firing a SESSION_IDLE event for session 2
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - serivce getRequest（返回预设语句）：HEARTBEATREQUEST
+2015-02-05 17:07:55 [NioProcessor-3] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - SENT: HEARTBEATREQUEST
+2015-02-05 17:07:55 [NioProcessor-3] [org.apache.mina.filter.executor.OrderedThreadPoolExecutor] [DEBUG] - Adding event MESSAGE_SENT to session 2
+Queue : [MESSAGE_SENT, ]
+
+2015-02-05 17:07:55 [NioProcessor-3] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - RECEIVED: HeapBuffer[pos=0 lim=18 cap=1024: 48 45 41 52 54 42 45 41 54 52 45 53 50 4F 4E 53...]
+2015-02-05 17:07:55 [NioProcessor-3] [org.apache.mina.filter.executor.OrderedThreadPoolExecutor] [DEBUG] - Adding event MESSAGE_RECEIVED to session 2
+Queue : [MESSAGE_SENT, , MESSAGE_RECEIVED, ]
+
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Event SESSION_IDLE has been fired for session 2
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Firing a MESSAGE_SENT event for session 2
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isRequest（是心跳包）： HEARTBEATREQUEST
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Event MESSAGE_SENT has been fired for session 2
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Firing a MESSAGE_RECEIVED event for session 2
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.filter.codec.ProtocolCodecFilter] [DEBUG] - Processing a MESSAGE_RECEIVED for session 2
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isRequest（不是心跳包）： HEARTBEATRESPONSE
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isResponse（是心跳包）：HEARTBEATRESPONSE
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isRequest（不是心跳包）： HEARTBEATRESPONSE
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isResponse（是心跳包）：HEARTBEATRESPONSE
+2015-02-05 17:07:55 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Event MESSAGE_RECEIVED has been fired for session 2
+2015-02-05 17:08:10 [NioProcessor-3] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - IDLE
+2015-02-05 17:08:10 [NioProcessor-3] [org.apache.mina.filter.executor.OrderedThreadPoolExecutor] [DEBUG] - Adding event SESSION_IDLE to session 2
+Queue : [SESSION_IDLE, ]
+
+2015-02-05 17:08:10 [pool-1-thread-2] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Firing a SESSION_IDLE event for session 2
+2015-02-05 17:08:10 [pool-1-thread-2] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - serivce getRequest（返回预设语句）：HEARTBEATREQUEST
+2015-02-05 17:08:10 [pool-1-thread-2] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Event SESSION_IDLE has been fired for session 2
+2015-02-05 17:08:10 [NioProcessor-3] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - SENT: HEARTBEATREQUEST
+2015-02-05 17:08:10 [NioProcessor-3] [org.apache.mina.filter.executor.OrderedThreadPoolExecutor] [DEBUG] - Adding event MESSAGE_SENT to session 2
+Queue : [MESSAGE_SENT, ]
+
+2015-02-05 17:08:10 [NioProcessor-3] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - RECEIVED: HeapBuffer[pos=0 lim=18 cap=512: 48 45 41 52 54 42 45 41 54 52 45 53 50 4F 4E 53...]
+2015-02-05 17:08:10 [NioProcessor-3] [org.apache.mina.filter.executor.OrderedThreadPoolExecutor] [DEBUG] - Adding event MESSAGE_RECEIVED to session 2
+Queue : [MESSAGE_SENT, , MESSAGE_RECEIVED, ]
+
+2015-02-05 17:08:10 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Firing a MESSAGE_SENT event for session 2
+2015-02-05 17:08:10 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isRequest（是心跳包）： HEARTBEATREQUEST
+2015-02-05 17:08:10 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Event MESSAGE_SENT has been fired for session 2
+2015-02-05 17:08:10 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Firing a MESSAGE_RECEIVED event for session 2
+2015-02-05 17:08:10 [pool-1-thread-1] [org.apache.mina.filter.codec.ProtocolCodecFilter] [DEBUG] - Processing a MESSAGE_RECEIVED for session 2
+2015-02-05 17:08:10 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isRequest（不是心跳包）： HEARTBEATRESPONSE
+2015-02-05 17:08:10 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isResponse（是心跳包）：HEARTBEATRESPONSE
+2015-02-05 17:08:10 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isRequest（不是心跳包）： HEARTBEATRESPONSE
+2015-02-05 17:08:10 [pool-1-thread-1] [org.apache.mina.keepAliveFilter.HeartBeatTestServer] [INFO] - service isResponse（是心跳包）：HEARTBEATRESPONSE
+2015-02-05 17:08:10 [pool-1-thread-1] [org.apache.mina.core.filterchain.IoFilterEvent] [DEBUG] - Event MESSAGE_RECEIVED has been fired for session 2

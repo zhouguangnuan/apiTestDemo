@@ -1,0 +1,67 @@
+﻿2015-02-05 17:07:40 [main] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - 客户端已连接上！
+2015-02-05 17:07:40 [NioProcessor-2] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - CREATED
+2015-02-05 17:07:40 [NioProcessor-2] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - OPENED
+2015-02-05 17:07:40 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatClientHandler] [INFO] - client sessionOpened
+2015-02-05 17:07:40 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatClientHandler] [INFO] - leaf:  心跳消息测试开始
+2015-02-05 17:07:40 [NioProcessor-2] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - SENT: 心跳消息测试开始
+2015-02-05 17:07:40 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isRequest（不是心跳包）: 心跳消息测试开始
+2015-02-05 17:07:40 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isResponse（不是心跳包）: 心跳消息测试开始
+2015-02-05 17:07:40 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatClientHandler] [INFO] - client messageSent:  心跳消息测试开始
+2015-02-05 17:07:55 [NioProcessor-2] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - IDLE
+2015-02-05 17:07:55 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client getRequest：null
+2015-02-05 17:07:55 [NioProcessor-2] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - RECEIVED: HeapBuffer[pos=0 lim=17 cap=2048: 48 45 41 52 54 42 45 41 54 52 45 51 55 45 53 54...]
+2015-02-05 17:07:55 [NioProcessor-2] [org.apache.mina.filter.codec.ProtocolCodecFilter] [DEBUG] - Processing a MESSAGE_RECEIVED for session 1
+2015-02-05 17:07:55 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isRequest（是心跳包）: HEARTBEATREQUEST
+2015-02-05 17:07:55 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client getResponse（返回预设语句）：HEARTBEATRESPONSE
+2015-02-05 17:07:55 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isResponse（不是心跳包）: HEARTBEATREQUEST
+2015-02-05 17:07:55 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isRequest（是心跳包）: HEARTBEATREQUEST
+2015-02-05 17:07:55 [NioProcessor-2] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - SENT: HEARTBEATRESPONSE
+2015-02-05 17:07:55 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isRequest（不是心跳包）: HEARTBEATRESPONSE
+2015-02-05 17:07:55 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isResponse（是心跳包）: HEARTBEATRESPONSE
+2015-02-05 17:08:10 [NioProcessor-2] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - RECEIVED: HeapBuffer[pos=0 lim=17 cap=2048: 48 45 41 52 54 42 45 41 54 52 45 51 55 45 53 54...]
+2015-02-05 17:08:10 [NioProcessor-2] [org.apache.mina.filter.codec.ProtocolCodecFilter] [DEBUG] - Processing a MESSAGE_RECEIVED for session 1
+2015-02-05 17:08:10 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isRequest（是心跳包）: HEARTBEATREQUEST
+2015-02-05 17:08:10 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client getResponse（返回预设语句）：HEARTBEATRESPONSE
+2015-02-05 17:08:10 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isResponse（不是心跳包）: HEARTBEATREQUEST
+2015-02-05 17:08:10 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isRequest（是心跳包）: HEARTBEATREQUEST
+2015-02-05 17:08:10 [NioProcessor-2] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - SENT: HEARTBEATRESPONSE
+2015-02-05 17:08:10 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isRequest（不是心跳包）: HEARTBEATRESPONSE
+2015-02-05 17:08:10 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatTestClient] [INFO] - client isResponse（是心跳包）: HEARTBEATRESPONSE
+2015-02-05 17:08:13 [NioProcessor-2] [org.apache.mina.filter.logging.LoggingFilter] [WARN] - EXCEPTION :
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:311)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:694)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:668)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:657)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1121)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2015-02-05 17:08:13 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatClientHandler] [INFO] - client exceptionCaught
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:311)
+	at org.apache.mina.transport.socket.nio.NioProcessor.read(NioProcessor.java:45)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.read(AbstractPollingIoProcessor.java:694)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:668)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.process(AbstractPollingIoProcessor.java:657)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor.access$600(AbstractPollingIoProcessor.java:67)
+	at org.apache.mina.core.polling.AbstractPollingIoProcessor$Processor.run(AbstractPollingIoProcessor.java:1121)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2015-02-05 17:08:13 [NioProcessor-2] [org.apache.mina.filter.logging.LoggingFilter] [INFO] - CLOSED
+2015-02-05 17:08:13 [NioProcessor-2] [org.apache.mina.keepAliveFilter.HeartBeatClientHandler] [INFO] - client sessionClosed

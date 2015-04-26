@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table name="v_user" catalog="test_hibernate">
+		<primary-key>
+			<key-column name="refrenceId" />
+		</primary-key>
+
+	</table>
+	<table name="DEPARTMENTGROUP" schema="BSUSER">
+		<primary-key>
+			<key-column name="DGCODE" />
+		</primary-key>
+	</table>
+	<table name="YJK_HYXX" schema="BSUSER">
+		<primary-key>
+			<key-column name="HYID" />
+		</primary-key>
+	</table>
+<table name="YJK_jyjgxx" schema="dbo" catalog="digitlab">
+	<primary-key>
+		<key-column name="ybbh" />
+	</primary-key>
+</table>
+</hibernate-reverse-engineering>
