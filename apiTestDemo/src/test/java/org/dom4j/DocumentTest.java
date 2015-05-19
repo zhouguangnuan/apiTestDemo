@@ -21,7 +21,10 @@ import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 import org.junit.Test;
 
+import bean.GET_DOC_HOS_PATIENT;
+
 import com.alibaba.fastjson.JSON;
+import com.singno.utils.IGPFUtils;
 
 /**<p>名称：DocumentTest.java</p>
  * <p>描述：</p>
@@ -65,8 +68,10 @@ public class DocumentTest
 	       anotherNameElement.setText("lin");
 	       Element anotherAgeElement = anotherStuElement.addElement("age");
 	       anotherAgeElement.setText("20");
-		 
-	       this.saveDocument(document, new File(fileStr));
+		
+	       System.out.println(document.asXML());
+	       
+//	       this.saveDocument(document, new File(fileStr));
 	}
 	
 	@Test
@@ -265,5 +270,64 @@ public class DocumentTest
 		}
 	}
 	
+	@Test
+	public void testname() throws Exception
+	{
+		Document document = DocumentHelper.createDocument();
+		
+	       // ProcessingInstruction
+//	       Map<String, String> inMap = new HashMap<String, String>();
+//	       inMap.put("type", "text/xsl");
+//	       inMap.put("href", "students.xsl");
+//	       document.addProcessingInstruction("xml-stylesheet", inMap);
+	       // root element
+		
+//		<REQUEST>
+//		  <HEADER>
+//		    <USERID>DOC_APP</USERID>
+//		    <PASSWORD>123</PASSWORD>
+//		    <TRANSNO>GET_DOC_HOS_SEARCH</TRANSNO>
+//		  </HEADER>
+//		  <BODY>
+//		    <GET_DOC_HOS_SEARCH>
+//		      <EMP_CODE>070807005</EMP_CODE>
+//		      <PATIENT_KEY>肖纳</PATIENT_KEY>
+//		      <SELECT_TYPE>1</SELECT_TYPE>
+//		      <PAGE_SIZE>10</PAGE_SIZE>
+//		      <PAGE_INDEX>0</PAGE_INDEX>
+//		    </GET_DOC_HOS_SEARCH>
+//		  </BODY>
+//		</REQUEST>
+
+		// REQUEST
+	       Element REQUEST = document.addElement("REQUEST");
+	       // HEADER
+	       Element HEADER = REQUEST.addElement("HEADER");
+	       Element nameElement = HEADER.addElement("USERID");
+	       nameElement.setText("DOC_APP");
+	       Element PASSWORD = HEADER.addElement("PASSWORD");
+	       PASSWORD.setText("123");
+	       Element TRANSNO = HEADER.addElement("TRANSNO");
+	       TRANSNO.setText("GET_DOC_HOS_SEARCH");// 
+	       
+	       // BODY
+	       Element BODY = REQUEST.addElement("BODY");
+	       
+	       Element requestForm = BODY.addElement("GET_DOC_HOS_SEARCH");// 
+	       requestForm.addElement("EMP_CODE").setText("070807005");
+	       requestForm.addElement("PATIENT_KEY").setText("肖纳");
+	       requestForm.addElement("SELECT_TYPE").setText("1");
+	       requestForm.addElement("PAGE_SIZE").setText("10");
+	       requestForm.addElement("PAGE_INDEX").setText("0");
+		
+	       System.out.println(document.asXML());
+	}
 	
+	@Test
+	public void testname77() throws Exception
+	{
+		Object requstFormBean = new GET_DOC_HOS_PATIENT();
+		String requestXml = IGPFUtils.buildRequestXml(requstFormBean);
+		System.out.println(requestXml);
+	}
 }
