@@ -17,7 +17,6 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import org.apache.commons.io.filefilter.FileFileFilter;
 import org.apache.commons.io.filefilter.IOFileFilter;
 import org.apache.commons.lang3.CharEncoding;
 import org.apache.commons.lang3.StringUtils;
@@ -25,6 +24,7 @@ import org.joda.time.DateTime;
 import org.junit.Test;
 
 import com.alibaba.fastjson.JSON;
+import com.sun.xml.internal.messaging.saaj.util.ByteInputStream;
 
 /**
  * <p>File：FileUtilsTest.java</p>
@@ -656,4 +656,13 @@ public class FileUtilsTest
 		File directory = FileUtils.getFile("sdfd");
 		System.out.println(FileUtils.isSymlink(directory));
 	}
+	
+	@Test
+	public void test_download() throws Exception
+	{
+		URL url = new URL("https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQFK8DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3kweXE0T3JscWY3UTltc3ZPMklvAAIEG9jUUgMECAcAAA%3d%3d");
+		byte[] bytest =  IOUtils.toByteArray(url.openStream());
+		new FileOutputStream("C:\\Users\\Administrator\\Desktop\\ss.jpg").write(bytest);
+	}
+	
 }

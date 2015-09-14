@@ -21,8 +21,7 @@ import org.apache.cxf.bean.User;
 public final class HelloService_HelloServicePort_Client
 {
 
-	private static final QName SERVICE_NAME = new QName(
-			"http://service.cxf.apache.org/", "HelloService");
+	private static final QName SERVICE_NAME = new QName("http://service.cxf.apache.org/", "HelloService");
 
 	private HelloService_HelloServicePort_Client()
 	{

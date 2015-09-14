@@ -16,8 +16,8 @@ public class PropertiesConfigurationTest
 	public void test1() throws Exception
 	{
 		//注意路径默认指向的是classpath的根目录  
-//		Configuration config = new PropertiesConfiguration("test.properties");  
-		Configuration config = new PropertiesConfiguration();
+		Configuration config = new PropertiesConfiguration("test.properties");  
+//		Configuration config = new PropertiesConfiguration();
 		
 		String ip=config.getString("ip");  
 		int port=config.getInt("port");  

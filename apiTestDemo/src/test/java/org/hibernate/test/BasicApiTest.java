@@ -8,9 +8,11 @@
 package org.hibernate.test;
 
 
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.beanutils.BeanUtils;
+import org.hibernate.Hibernate;
 import org.hibernate.Query;
 import org.hibernate.entity.User;
 import org.hibernate.entity2.VUser;
@@ -34,12 +36,12 @@ public class BasicApiTest extends BaseTest
 	public void testSave() throws Exception
 	{
 		session.beginTransaction();
-		
 		User user = new User();
 		user.setUserName("singno");
 		user.setPassword("123123");
 		user.setSalt("sdfsadgdfgdfgfdg");
 		user.setAge(11);
+		user.setCreateTime(new Date());
 		session.save(user);
 		
 //		Husband husband = new Husband();

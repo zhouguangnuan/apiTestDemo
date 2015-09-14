@@ -14,3 +14,4 @@ encoding//src/test/java/jdk/io=GBK
 encoding//src/test/java/jdk/io/IOUtils.java=GBK
 encoding//src/test/java/org/apache/commons/lang3/ToStringBuilderTest.java=gbk
 encoding/<project>=UTF-8
+encoding/publicKey.key=UTF-8

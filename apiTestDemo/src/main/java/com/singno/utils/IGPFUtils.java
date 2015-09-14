@@ -8,7 +8,6 @@
  */
 package com.singno.utils;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 import net.sf.json.JSON;
@@ -19,11 +18,7 @@ import org.apache.log4j.Logger;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
-import org.junit.Test;
 
-import bean.GET_DOC_HOS_PATIENT;
-
-import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Maps;
 
 /**
@@ -68,7 +63,8 @@ public class IGPFUtils
 		try
 		{
 			params = BeanUtils.describe(requstFormBean);
-		} catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e)
+		} 
+		catch (Exception e)
 		{
 			logger.error(e);
 			params = Maps.newHashMap();
@@ -120,13 +116,5 @@ public class IGPFUtils
 		
 		String resultXmlStr = "";
 		return new XMLSerializer().read(resultXmlStr);
-	}
-	
-	@Test
-	public void testname77() throws Exception
-	{
-		Object requstFormBean = new GET_DOC_HOS_PATIENT();
-		String requestXml = IGPFUtils.buildRequestXml(requstFormBean);
-		System.out.println(requestXml);
 	}
 }

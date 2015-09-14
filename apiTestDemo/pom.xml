@@ -227,13 +227,6 @@
 			<version>0.4.7</version>
 		</dependency>
 
-		<!-- poi：提供对Microsoft Office格式档案读和写的功能 -->
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.6</version>
-		</dependency>
-
 		<!-- log -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -241,25 +234,34 @@
 			<version>1.7.7</version>
 		</dependency>
 
+		<!-- cxf：web service框架 -->
 		<dependency>
-			<groupId>org.apache.cxf.karaf</groupId>
-			<artifactId>apache-cxf</artifactId>
-			<version>3.0.0</version>
-			<type>pom</type>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>2.6.1</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>2.6.1</version>
+		</dependency>
+
 
 		<!-- ********************************* START spring ********************************* -->
 		<!-- spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>3.2.3.RELEASE</version>
+			<!-- <version>3.2.3.RELEASE</version> -->
+			<version>4.0.0.RELEASE</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>3.2.3.RELEASE</version>
+			<!-- <version>3.2.3.RELEASE</version> -->
+			<version>4.0.0.RELEASE</version>
 		</dependency>
 
 		<!-- ********************************* END spring ********************************* -->
@@ -325,6 +327,25 @@
 			<artifactId>sqljdbc4</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+
+
+		<!-- ********************************* START poi ********************************* -->
+		<!-- poi：提供对Microsoft Office格式档案读和写的功能 -->
+		<!-- <dependency> <groupId>org.apache.poi</groupId> <artifactId>poi</artifactId> 
+			<version>3.6</version> </dependency> -->
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.9</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-excelant</artifactId>
+			<version>3.8-beta5</version>
+		</dependency>
+		<!-- ********************************* END poi ********************************* -->
 
 	</dependencies>
 </project>

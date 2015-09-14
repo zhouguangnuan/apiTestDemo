@@ -1,5 +1,7 @@
 package org.hibernate.entity;
 
+import java.util.Date;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,7 +16,6 @@ import org.hibernate.entity.base.BaseUser;
 @Table(name = "User")
 public class User extends BaseUser
 {
-	
 	@ManyToOne(fetch=FetchType.LAZY, cascade={CascadeType.ALL})
 	@JoinColumn(name="departmentId")// 设置外键列名
 	private Department department;
@@ -35,6 +36,9 @@ public class User extends BaseUser
 	
 	@Column(name="description", length=50)
 	private String description;// 描述
+	
+	@Column(name="createTime")
+	private Date createTime;
 
 	public Department getDepartment()
 	{
@@ -94,5 +98,15 @@ public class User extends BaseUser
 	public void setDescription(String description)
 	{
 		this.description = description;
+	}
+
+	public Date getCreateTime()
+	{
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime)
+	{
+		this.createTime = createTime;
 	}
 }

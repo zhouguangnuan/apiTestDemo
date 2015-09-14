@@ -12,7 +12,7 @@ import javax.persistence.TemporalType;
  * YjkHyxx entity. @author MyEclipse Persistence Tools
  */
 @Entity
-@Table(name = "YJK_HYXX", schema = "BSUSER")
+@Table(name = "YjkHyxx")
 public class YjkHyxx implements java.io.Serializable
 {
 

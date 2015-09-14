@@ -83,6 +83,13 @@ public class StringUtils_Test
 		// ...fghi...
 	}
 	
+	@Test
+	public void testAbbreviateMiddle() throws Exception
+	{
+		String str = "15669108193";
+		System.out.println(StringUtils.abbreviateMiddle(str, "****", 10));// 中华...
+	}
+	
 	/**
 	 * 返回两字符串不同处索引号
 	 * @throws Exception
