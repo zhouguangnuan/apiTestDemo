@@ -46,6 +46,7 @@ public class FileUtilsTest
 	private static final String filename5 = "C:/Users/txsb/Desktop/22";
 	private static final String filename6 = "C:/Users/txsb/Desktop/22/test.txt";
 	
+	// 11
 	
 	private File directory = FileUtils.getFile(filename2);
 	private IOFileFilter fileFilter = new IOFileFilter(){
