@@ -30,14 +30,12 @@ import org.apache.cxf.bean.User;
 public class HelloServiceImpl implements HelloService
 {
 
-	@Override
 	public String sayHi(String text)
 	{
 		System.out.println("sayHi called...");
 		return "Hi :" + text;
 	}
 
-	@Override
 	public String getUser(User user)
 	{
 		System.out.println("sayUser called...");
@@ -45,7 +43,6 @@ public class HelloServiceImpl implements HelloService
 				+ "]";
 	}
 
-	@Override
 	public List<User> getListUser()
 	{
 		System.out.println("getListUser called...");

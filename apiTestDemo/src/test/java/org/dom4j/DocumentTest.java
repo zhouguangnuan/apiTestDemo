@@ -233,7 +233,6 @@ public class DocumentTest
 	 */
 	public static class StudentHandler implements ElementHandler
 	{
-		@Override
 		public void onStart(ElementPath elementPath)
 		{
 			Element elt  = elementPath.getCurrent();
@@ -242,7 +241,6 @@ public class DocumentTest
 			elementPath.addHandler("name", new NameHandler());
 		}
 
-		@Override
 		public void onEnd(ElementPath elementPath)
 		{
 			// 移除对子元素<name>的处理器。
@@ -255,13 +253,11 @@ public class DocumentTest
 	 */
 	private static class NameHandler implements ElementHandler
 	{
-		@Override
 		public void onStart(ElementPath elementPath)
 		{
 			System.out.println("path : " + elementPath.getPath());
 		}
 
-		@Override
 		public void onEnd(ElementPath elementPath)
 		{
 			Element elt = elementPath.getCurrent();

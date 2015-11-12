@@ -243,7 +243,6 @@ public class XMemcachedTest
 		memcachedClient.cas(key, exp, new CASOperation<Set<String>>(){
 
 			// 设置允许你尝试去原子更新某个key存储的数据的次数
-			@Override
 			public int getMaxTries()
 			{
 				return 2;
@@ -251,7 +250,6 @@ public class XMemcachedTest
 			}
 
 			// 获得将被替换成的值
-			@Override
 			public Set<String> getNewValue(long currentCAS, Set<String> currentValue)
 			{
 				if (cas == currentCAS)// 表示数据没有被其它请求更新过，可以直接更新值

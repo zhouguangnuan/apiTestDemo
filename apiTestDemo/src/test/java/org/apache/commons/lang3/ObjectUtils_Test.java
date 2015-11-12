@@ -178,7 +178,6 @@ public class ObjectUtils_Test
 		
 		// 自定义比较规则
 		System.out.println(ObjectUtils.median(new Comparator<String>(){
-			@Override
 			public int compare(String o1, String o2)
 			{
 				return 0;

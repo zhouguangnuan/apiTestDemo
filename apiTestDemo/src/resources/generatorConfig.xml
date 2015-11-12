@@ -31,7 +31,7 @@
 		<!-- jdbc连接 -->  
 		<!-- connectionURL="jdbc:mysql://192.168.60.244:3306/benlai_mobile" -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/mybatis_generator_test"
+			connectionURL="jdbc:mysql://localhost:3306/benlai_mobile"
 			userId="root"
 			password="">
 		</jdbcConnection>

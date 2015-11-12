@@ -100,7 +100,6 @@ public class HeartBeatTestServer {
 		 * 根据心率回调该接口，发送心跳请求
 		 * （策略：根据心率发送心跳请求，得不到心跳回复则回调 keepAliveRequestTimedOut()）
 		 */
-		@Override
 		public Object getRequest(IoSession session) {
 			logger.info("serivce getRequest（返回预设语句）：" + HEARTBEATREQUEST);
 			/** 返回预设语句 */
@@ -110,7 +109,6 @@ public class HeartBeatTestServer {
 		/**
 		 * isRequest()==true时回调，返回（预设的）心跳回复
 		 */
-		@Override
 		public Object getResponse(IoSession session, Object request) {
 			logger.info("service getResponse（返回预设语句）：" + HEARTBEATRESPONSE);
 			/** 返回预设语句 */
@@ -124,7 +122,6 @@ public class HeartBeatTestServer {
 		 * 
 		 * 如果判断通过，则不继续调用　isResponse() 进行判断
 		 */
-		@Override
 		public boolean isRequest(IoSession session, Object message) {
 			if(message.equals(HEARTBEATREQUEST))
 			{
@@ -139,7 +136,6 @@ public class HeartBeatTestServer {
 		 * 判断请求是否是心跳回复
 		 * 注意：心跳消息，不会触发 messageSent() 和　messageReceived()
 		 */
-		@Override
 		public boolean isResponse(IoSession session, Object message) {
 			if(message.equals(HEARTBEATRESPONSE)) {
 				logger.info("service isResponse（是心跳包）：" + message);
@@ -165,7 +161,6 @@ public class HeartBeatTestServer {
 		/**
 		 * 当发送心跳请求得不到心跳回复时，回调。
 		 */
-		@Override
 		public void keepAliveRequestTimedOut(KeepAliveFilter filter, IoSession session) throws Exception {
 			logger.info("service keepAliveRequestTimedOut（心跳超时！）");
 		}

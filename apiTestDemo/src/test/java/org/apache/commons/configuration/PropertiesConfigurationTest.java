@@ -1,8 +1,11 @@
 package org.apache.commons.configuration;
 
+import java.io.InputStreamReader;
 import java.util.List;
+import java.util.Properties;
 
 import org.junit.Test;
+import org.springframework.util.NumberUtils;
 
 @SuppressWarnings("all")
 public class PropertiesConfigurationTest
@@ -46,6 +49,19 @@ public class PropertiesConfigurationTest
 		String[] keys=config.getStringArray("keys2");  
 		List key2=config.getList("keys2");  
 		System.out.println();
+	}
+	
+	@Test
+	public void testname() throws Exception
+	{
+//		Configuration config = new PropertiesConfiguration("test.properties");  
+//		String s = config.getString("test.aa"); 
+		
+		
+		Properties prop=new Properties();         
+		prop.load(new InputStreamReader(PropertiesConfigurationTest.class.getClassLoader().getResourceAsStream("test.properties"), "UTF-8"));  
+		
+		System.out.println(prop.get("test.aa"));
 	}
 	
 	/**

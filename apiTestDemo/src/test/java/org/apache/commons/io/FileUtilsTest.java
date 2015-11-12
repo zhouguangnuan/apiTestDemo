@@ -50,7 +50,6 @@ public class FileUtilsTest
 	
 	private File directory = FileUtils.getFile(filename2);
 	private IOFileFilter fileFilter = new IOFileFilter(){
-		@Override
 		public boolean accept(File file)
 		{
 			System.out.println("fileFilter:" + file.getName());
@@ -58,7 +57,6 @@ public class FileUtilsTest
 			return flag;
 		}
 
-		@Override
 		public boolean accept(File dir, String name)
 		{
 			System.out.println("fileFilter:" + dir.getName());
@@ -69,7 +67,6 @@ public class FileUtilsTest
 	};
 	
 	private IOFileFilter dirFilter = new IOFileFilter(){
-		@Override
 		public boolean accept(File file)
 		{
 			System.out.println("dirFilter:" + file.getName());
@@ -77,7 +74,6 @@ public class FileUtilsTest
 			return flag;
 		}
 
-		@Override
 		public boolean accept(File dir, String name)
 		{
 			System.out.println("dirFilter:" + dir.getName());
