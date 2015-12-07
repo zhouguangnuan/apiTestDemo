@@ -1,10 +1,12 @@
 package com.singno.utils;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+
 import org.apache.commons.compress.archivers.ArchiveEntry;
 import org.apache.commons.compress.archivers.zip.ZipArchiveInputStream;
 import org.apache.commons.io.output.ByteArrayOutputStream;
-import org.apache.cxf.common.i18n.Exception;
-import org.apache.xpath.operations.String;
 import org.junit.Test;
 
 import com.google.common.base.Charsets;
