@@ -2,44 +2,65 @@ package test.mybatis.generator.bean;
 
 import java.util.Date;
 
-public class User {
-    private String id;
+public class User
+{
+        private String id;
 
-    private String name;
+        private String name;
 
-    private Integer age;
+        private Integer age;
 
-    private Date birthday;
+        private Date birthday;
 
-    public String getId() {
-        return id;
-    }
+        public User()
+        {
+                super();
+        }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
-    }
+        public User(String id, String name)
+        {
+                super();
+                this.id = id;
+                this.name = name;
+        }
 
-    public String getName() {
-        return name;
-    }
+        public String getId()
+        {
+                return id;
+        }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
+        public void setId(String id)
+        {
+                this.id = id == null ? null : id.trim();
+        }
 
-    public Integer getAge() {
-        return age;
-    }
+        public String getName()
+        {
+                return name;
+        }
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+        public void setName(String name)
+        {
+                this.name = name == null ? null : name.trim();
+        }
 
-    public Date getBirthday() {
-        return birthday;
-    }
+        public Integer getAge()
+        {
+                return age;
+        }
 
-    public void setBirthday(Date birthday) {
-        this.birthday = birthday;
-    }
+        public void setAge(Integer age)
+        {
+                this.age = age;
+        }
+
+        public Date getBirthday()
+        {
+                return birthday;
+        }
+
+        public void setBirthday(Date birthday)
+        {
+                this.birthday = birthday;
+        }
 }

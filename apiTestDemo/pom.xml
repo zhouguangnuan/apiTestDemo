@@ -1,365 +1,372 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.singno.demo.test</groupId>
-	<artifactId>utils</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+        <groupId>com.singno.demo.test</groupId>
+        <artifactId>utils</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <packaging>jar</packaging>
 
-	<name>apiTestDemo</name>
-	<url>http://maven.apache.org</url>
+        <name>apiTestDemo</name>
+        <url>http://maven.apache.org</url>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+        <properties>
+                <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        </properties>
 
-	<dependencies>
+        <dependencies>
 
-		<!-- junit -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-
-
-		<!-- ********************************* START commons ********************************* -->
-		<!-- commons-lang -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.1</version>
-		</dependency>
-
-		<!-- commons-collections4 -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-collections4</artifactId>
-			<version>4.0</version>
-		</dependency>
-
-		<!-- commons-compress -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-compress</artifactId>
-			<version>1.8.1</version>
-		</dependency>
-
-		<!-- commons-io -->
-		<!-- <dependency> <groupId>org.apache.commons</groupId> <artifactId>commons-io</artifactId> 
-			<version>1.3.2</version> </dependency> -->
-
-		<!-- beanutils -->
-		<dependency>
-			<groupId>commons-beanutils</groupId>
-			<artifactId>commons-beanutils</artifactId>
-			<version>1.8.3</version>
-		</dependency>
-
-		<!-- commons-configuration：对各种格式的配置和参考文件提供读取帮助 -->
-		<dependency>
-			<groupId>commons-configuration</groupId>
-			<artifactId>commons-configuration</artifactId>
-			<version>1.9</version>
-		</dependency>
-
-		<!-- commons-validator -->
-		<dependency>
-			<groupId>commons-validator</groupId>
-			<artifactId>commons-validator</artifactId>
-			<version>1.4.0</version>
-		</dependency>
-
-		<!-- commons-codec：处理常用的编码方法的工具类报，列如DES、SHA1、Base64等等 -->
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>1.9</version>
-		</dependency>
-
-		<!-- commons-io -->
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
-		</dependency>
-
-		<!-- commons-fileupload -->
-		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>1.3.1</version>
-		</dependency>
-
-		<!-- commons-httpclient -->
-		<dependency>
-			<groupId>commons-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>3.1</version>
-		</dependency>
-
-		<!-- ********************************* END commons ********************************* -->
-
-		<!-- google guava -->
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>17.0</version>
-		</dependency>
-
-		<!-- httpclient-cache -->
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient-cache</artifactId>
-			<version>4.2.2</version>
-		</dependency>
-
-		<!-- mina：网络应用程序框架 -->
-		<dependency>
-			<groupId>org.apache.mina</groupId>
-			<artifactId>mina-core</artifactId>
-			<version>2.0.9</version>
-		</dependency>
-
-		<!-- fastutil：扩展了java集合框架 -->
-		<dependency>
-			<groupId>fastutil</groupId>
-			<artifactId>fastutil</artifactId>
-			<version>5.0.9</version>
-		</dependency>
-
-		<!-- joda-time -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>2.3</version>
-		</dependency>
-
-		<!-- JSON -->
-		<!-- fastjson -->
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.1.38</version>
-		</dependency>
-		<!-- gson -->
-		<dependency>
-			<groupId>com.google.code.gson</groupId>
-			<artifactId>gson</artifactId>
-			<version>2.2.4</version>
-		</dependency>
-		<!-- ezmorph -->
-		<dependency>
-			<groupId>net.sf.ezmorph</groupId>
-			<artifactId>ezmorph</artifactId>
-			<version>1.0.6</version>
-		</dependency>
-		<!-- json-lib -->
-		<dependency>
-			<groupId>net.sf.json-lib</groupId>
-			<artifactId>json-lib</artifactId>
-			<version>2.4</version>
-			<classifier>jdk15</classifier>
-		</dependency>
-
-		<!-- jsoup：html解析工具 -->
-		<dependency>
-			<groupId>org.jsoup</groupId>
-			<artifactId>jsoup</artifactId>
-			<version>1.7.3</version>
-		</dependency>
-
-		<!-- XML -->
-		<dependency>
-			<groupId>org.jdom</groupId>
-			<artifactId>jdom</artifactId>
-			<version>2.0.2</version>
-		</dependency>
-		<!-- dom4j -->
-		<dependency>
-			<groupId>dom4j</groupId>
-			<artifactId>dom4j</artifactId>
-			<version>1.6.1</version>
-		</dependency>
-		<!-- jaxen -->
-		<dependency>
-			<groupId>jaxen</groupId>
-			<artifactId>jaxen</artifactId>
-			<version>1.1.6</version>
-		</dependency>
-		<!-- stax-api -->
-		<dependency>
-			<groupId>stax</groupId>
-			<artifactId>stax-api</artifactId>
-			<version>1.0.1</version>
-		</dependency>
-		<!-- xml-resolver -->
-		<dependency>
-			<groupId>xml-resolver</groupId>
-			<artifactId>xml-resolver</artifactId>
-			<version>1.2</version>
-		</dependency>
-		<!-- xmlbeans -->
-		<dependency>
-			<groupId>org.apache.xmlbeans</groupId>
-			<artifactId>xmlbeans</artifactId>
-			<version>2.5.0</version>
-		</dependency>
-		<!-- xmlschema-core -->
-		<dependency>
-			<groupId>org.apache.ws.xmlschema</groupId>
-			<artifactId>xmlschema-core</artifactId>
-			<version>2.0.2</version>
-		</dependency>
-		<!-- xom -->
-		<dependency>
-			<groupId>xom</groupId>
-			<artifactId>xom</artifactId>
-			<version>1.2.5</version>
-		</dependency>
-
-		<!-- thumbnailator：图片开源工具（裁剪、压缩、打水印...） -->
-		<dependency>
-			<groupId>net.coobird</groupId>
-			<artifactId>thumbnailator</artifactId>
-			<version>0.4.7</version>
-		</dependency>
-
-		<!-- log -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.7</version>
-		</dependency>
-
-		<!-- cxf：web service框架 -->
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-frontend-jaxws</artifactId>
-			<version>2.6.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-transports-http</artifactId>
-			<version>2.6.1</version>
-		</dependency>
+                <!-- junit -->
+                <dependency>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                        <version>4.11</version>
+                        <scope>test</scope>
+                </dependency>
 
 
-		<!-- ********************************* START spring ********************************* -->
-		<!-- spring -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<!-- <version>3.2.3.RELEASE</version> -->
-			<version>4.0.0.RELEASE</version>
-		</dependency>
+                <!-- ********************************* START commons ********************************* -->
+                <!-- commons-lang -->
+                <dependency>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-lang3</artifactId>
+                        <version>3.1</version>
+                </dependency>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-orm</artifactId>
-			<!-- <version>3.2.3.RELEASE</version> -->
-			<version>4.0.0.RELEASE</version>
-		</dependency>
+                <!-- commons-collections4 -->
+                <dependency>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-collections4</artifactId>
+                        <version>4.0</version>
+                </dependency>
 
-		<!-- ********************************* END spring ********************************* -->
+                <!-- commons-compress -->
+                <dependency>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-compress</artifactId>
+                        <version>1.8.1</version>
+                </dependency>
 
-		<!-- ********************************* START hibernate ********************************* -->
-		<!-- hibernate -->
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>4.2.2.Final</version>
-		</dependency>
+                <!-- commons-io -->
+                <!-- <dependency> <groupId>org.apache.commons</groupId> <artifactId>commons-io</artifactId> <version>1.3.2</version> </dependency> -->
 
-		<!-- hibernate-entitymanager -->
-		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-entitymanager</artifactId> 
-			<version>4.2.8.Final</version> </dependency> -->
+                <!-- beanutils -->
+                <dependency>
+                        <groupId>commons-beanutils</groupId>
+                        <artifactId>commons-beanutils</artifactId>
+                        <version>1.8.3</version>
+                </dependency>
 
-		<!-- hibernate-validator -->
-		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-validator</artifactId> 
-			<version>1.3</version> </dependency> -->
+                <!-- commons-configuration：对各种格式的配置和参考文件提供读取帮助 -->
+                <dependency>
+                        <groupId>commons-configuration</groupId>
+                        <artifactId>commons-configuration</artifactId>
+                        <version>1.9</version>
+                </dependency>
 
-		<!-- ********************************* END hibernate ********************************* -->
+                <!-- commons-validator -->
+                <dependency>
+                        <groupId>commons-validator</groupId>
+                        <artifactId>commons-validator</artifactId>
+                        <version>1.4.0</version>
+                </dependency>
 
-		<!-- ********************************* START mybatis ********************************* -->
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis</artifactId> 
-			<version>3.2.8</version>
-		</dependency>
-		<dependency>
-			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis-spring</artifactId>
-			<version>1.2.2</version>
-		</dependency>
-		<!-- ********************************* END mybatis ********************************* -->
+                <!-- commons-codec：处理常用的编码方法的工具类报，列如DES、SHA1、Base64等等 -->
+                <dependency>
+                        <groupId>commons-codec</groupId>
+                        <artifactId>commons-codec</artifactId>
+                        <version>1.9</version>
+                </dependency>
+
+                <!-- commons-io -->
+                <dependency>
+                        <groupId>commons-io</groupId>
+                        <artifactId>commons-io</artifactId>
+                        <version>2.4</version>
+                </dependency>
+
+                <!-- commons-fileupload -->
+                <dependency>
+                        <groupId>commons-fileupload</groupId>
+                        <artifactId>commons-fileupload</artifactId>
+                        <version>1.3.1</version>
+                </dependency>
+
+                <!-- commons-httpclient -->
+                <dependency>
+                        <groupId>commons-httpclient</groupId>
+                        <artifactId>commons-httpclient</artifactId>
+                        <version>3.1</version>
+                </dependency>
+                
+                <!-- spring-test -->
+                <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-test</artifactId>
+                        <version>4.0.0.RELEASE</version>
+                </dependency>
+
+                <!-- <dependency>
+                        <groupId>org.apache.commons.monitoring</groupId>
+                        <artifactId>commons-monitoring-spring</artifactId>
+                        <version>1.0-SNAPSHOT</version>
+                </dependency> -->
+
+                <!-- ********************************* END commons ********************************* -->
+
+                <!-- google guava -->
+                <dependency>
+                        <groupId>com.google.guava</groupId>
+                        <artifactId>guava</artifactId>
+                        <version>17.0</version>
+                </dependency>
+
+                <!-- httpclient-cache -->
+                <dependency>
+                        <groupId>org.apache.httpcomponents</groupId>
+                        <artifactId>httpclient-cache</artifactId>
+                        <version>4.2.2</version>
+                </dependency>
+
+                <!-- mina：网络应用程序框架 -->
+                <dependency>
+                        <groupId>org.apache.mina</groupId>
+                        <artifactId>mina-core</artifactId>
+                        <version>2.0.9</version>
+                </dependency>
+
+                <!-- fastutil：扩展了java集合框架 -->
+                <dependency>
+                        <groupId>fastutil</groupId>
+                        <artifactId>fastutil</artifactId>
+                        <version>5.0.9</version>
+                </dependency>
+
+                <!-- joda-time -->
+                <dependency>
+                        <groupId>joda-time</groupId>
+                        <artifactId>joda-time</artifactId>
+                        <version>2.3</version>
+                </dependency>
+
+                <!-- JSON -->
+                <!-- fastjson -->
+                <dependency>
+                        <groupId>com.alibaba</groupId>
+                        <artifactId>fastjson</artifactId>
+                        <version>1.1.38</version>
+                </dependency>
+                <!-- gson -->
+                <dependency>
+                        <groupId>com.google.code.gson</groupId>
+                        <artifactId>gson</artifactId>
+                        <version>2.2.4</version>
+                </dependency>
+                <!-- ezmorph -->
+                <dependency>
+                        <groupId>net.sf.ezmorph</groupId>
+                        <artifactId>ezmorph</artifactId>
+                        <version>1.0.6</version>
+                </dependency>
+                <!-- json-lib -->
+                <dependency>
+                        <groupId>net.sf.json-lib</groupId>
+                        <artifactId>json-lib</artifactId>
+                        <version>2.4</version>
+                        <classifier>jdk15</classifier>
+                </dependency>
+
+                <!-- jsoup：html解析工具 -->
+                <dependency>
+                        <groupId>org.jsoup</groupId>
+                        <artifactId>jsoup</artifactId>
+                        <version>1.7.3</version>
+                </dependency>
+
+                <!-- XML -->
+                <dependency>
+                        <groupId>org.jdom</groupId>
+                        <artifactId>jdom</artifactId>
+                        <version>2.0.2</version>
+                </dependency>
+                <!-- dom4j -->
+                <dependency>
+                        <groupId>dom4j</groupId>
+                        <artifactId>dom4j</artifactId>
+                        <version>1.6.1</version>
+                </dependency>
+                <!-- jaxen -->
+                <dependency>
+                        <groupId>jaxen</groupId>
+                        <artifactId>jaxen</artifactId>
+                        <version>1.1.6</version>
+                </dependency>
+                <!-- stax-api -->
+                <dependency>
+                        <groupId>stax</groupId>
+                        <artifactId>stax-api</artifactId>
+                        <version>1.0.1</version>
+                </dependency>
+                <!-- xml-resolver -->
+                <dependency>
+                        <groupId>xml-resolver</groupId>
+                        <artifactId>xml-resolver</artifactId>
+                        <version>1.2</version>
+                </dependency>
+                <!-- xmlbeans -->
+                <dependency>
+                        <groupId>org.apache.xmlbeans</groupId>
+                        <artifactId>xmlbeans</artifactId>
+                        <version>2.5.0</version>
+                </dependency>
+                <!-- xmlschema-core -->
+                <dependency>
+                        <groupId>org.apache.ws.xmlschema</groupId>
+                        <artifactId>xmlschema-core</artifactId>
+                        <version>2.0.2</version>
+                </dependency>
+                <!-- xom -->
+                <dependency>
+                        <groupId>xom</groupId>
+                        <artifactId>xom</artifactId>
+                        <version>1.2.5</version>
+                </dependency>
+
+                <!-- thumbnailator：图片开源工具（裁剪、压缩、打水印...） -->
+                <dependency>
+                        <groupId>net.coobird</groupId>
+                        <artifactId>thumbnailator</artifactId>
+                        <version>0.4.7</version>
+                </dependency>
+
+                <!-- log -->
+                <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                        <version>1.7.7</version>
+                </dependency>
+
+                <!-- cxf：web service框架 -->
+                <dependency>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-rt-frontend-jaxws</artifactId>
+                        <version>2.6.1</version>
+                </dependency>
+
+                <dependency>
+                        <groupId>org.apache.cxf</groupId>
+                        <artifactId>cxf-rt-transports-http</artifactId>
+                        <version>2.6.1</version>
+                </dependency>
 
 
-		<!-- xmemcached -->
-		<dependency>
-			<groupId>com.googlecode.xmemcached</groupId>
-			<artifactId>xmemcached</artifactId>
-			<version>2.0.0</version>
-		</dependency>
+                <!-- ********************************* START spring ********************************* -->
+                <!-- spring -->
+                <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-context</artifactId>
+                        <!-- <version>3.2.3.RELEASE</version> -->
+                        <version>4.0.0.RELEASE</version>
+                </dependency>
 
-		<!-- jpush：JPush极光推送Java服务器端API -->
-		<dependency>
-			<groupId>cn.jpush.api</groupId>
-			<artifactId>jpush-client</artifactId>
-			<version>3.1.3</version>
-		</dependency>
+                <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-orm</artifactId>
+                        <!-- <version>3.2.3.RELEASE</version> -->
+                        <version>4.0.0.RELEASE</version>
+                </dependency>
 
-		<!-- 数据库连接池 -->
-		<dependency>
-			<groupId>commons-dbcp</groupId>
-			<artifactId>commons-dbcp</artifactId>
-			<version>1.4</version>
-		</dependency>
+                <!-- ********************************* END spring ********************************* -->
 
-		<!-- mysql -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.30</version>
-		</dependency>
+                <!-- ********************************* START hibernate ********************************* -->
+                <!-- hibernate -->
+                <dependency>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate-core</artifactId>
+                        <version>4.2.2.Final</version>
+                </dependency>
 
-		<!-- oracle（oracle jdbc driver） -->
-		<!-- <dependency> <groupId>com.oracle</groupId> <artifactId>ojdbc14</artifactId> 
-			<version>10.2.0.5.0</version> </dependency> -->
+                <!-- hibernate-entitymanager -->
+                <!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-entitymanager</artifactId> <version>4.2.8.Final</version> </dependency> -->
 
-		<!-- sqlserver jdbc driver -->
-		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>sqljdbc4</artifactId>
-			<version>4.4.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>sqljdbc4</artifactId>
-			<version>1.0.0</version>
-		</dependency>
+                <!-- hibernate-validator -->
+                <!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-validator</artifactId> <version>1.3</version> </dependency> -->
+
+                <!-- ********************************* END hibernate ********************************* -->
+
+                <!-- ********************************* START mybatis ********************************* -->
+                <dependency>
+                        <groupId>org.mybatis</groupId>
+                        <artifactId>mybatis</artifactId>
+                        <version>3.2.8</version>
+                </dependency>
+                <dependency>
+                        <groupId>org.mybatis</groupId>
+                        <artifactId>mybatis-spring</artifactId>
+                        <version>1.2.2</version>
+                </dependency>
+                <!-- ********************************* END mybatis ********************************* -->
 
 
-		<!-- ********************************* START poi ********************************* -->
-		<!-- poi：提供对Microsoft Office格式档案读和写的功能 -->
-		<!-- <dependency> <groupId>org.apache.poi</groupId> <artifactId>poi</artifactId> 
-			<version>3.6</version> </dependency> -->
+                <!-- xmemcached -->
+                <dependency>
+                        <groupId>com.googlecode.xmemcached</groupId>
+                        <artifactId>xmemcached</artifactId>
+                        <version>2.0.0</version>
+                </dependency>
 
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.9</version>
-		</dependency>
+                <!-- jpush：JPush极光推送Java服务器端API -->
+                <dependency>
+                        <groupId>cn.jpush.api</groupId>
+                        <artifactId>jpush-client</artifactId>
+                        <version>3.1.3</version>
+                </dependency>
 
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-excelant</artifactId>
-			<version>3.8-beta5</version>
-		</dependency>
-		<!-- ********************************* END poi ********************************* -->
+                <!-- 数据库连接池 -->
+                <dependency>
+                        <groupId>commons-dbcp</groupId>
+                        <artifactId>commons-dbcp</artifactId>
+                        <version>1.4</version>
+                </dependency>
 
-	</dependencies>
+                <!-- mysql -->
+                <dependency>
+                        <groupId>mysql</groupId>
+                        <artifactId>mysql-connector-java</artifactId>
+                        <version>5.1.30</version>
+                </dependency>
+
+                <!-- oracle（oracle jdbc driver） -->
+                <!-- <dependency> <groupId>com.oracle</groupId> <artifactId>ojdbc14</artifactId> <version>10.2.0.5.0</version> </dependency> -->
+
+                <!-- sqlserver jdbc driver -->
+                <dependency>
+                        <groupId>com.microsoft.sqlserver</groupId>
+                        <artifactId>sqljdbc4</artifactId>
+                        <version>4.4.0</version>
+                </dependency>
+                <dependency>
+                        <groupId>com.microsoft.sqlserver</groupId>
+                        <artifactId>sqljdbc4</artifactId>
+                        <version>1.0.0</version>
+                </dependency>
+
+
+                <!-- ********************************* START poi ********************************* -->
+                <!-- poi：提供对Microsoft Office格式档案读和写的功能 -->
+                <!-- <dependency> <groupId>org.apache.poi</groupId> <artifactId>poi</artifactId> <version>3.6</version> </dependency> -->
+
+                <dependency>
+                        <groupId>org.apache.poi</groupId>
+                        <artifactId>poi</artifactId>
+                        <version>3.9</version>
+                </dependency>
+
+                <dependency>
+                        <groupId>org.apache.poi</groupId>
+                        <artifactId>poi-excelant</artifactId>
+                        <version>3.8-beta5</version>
+                </dependency>
+                <!-- ********************************* END poi ********************************* -->
+
+        </dependencies>
 </project>

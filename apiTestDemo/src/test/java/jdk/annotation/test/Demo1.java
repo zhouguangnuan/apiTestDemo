@@ -16,7 +16,7 @@ public class Demo1
 		if (beAnnotation)
 		{
 			Annotation1 annotation = (Annotation1) clazz.getAnnotation(Annotation1.class);
-			System.out.println("annotation£º" + annotation);
+			System.out.println("annotationï¿½ï¿½" + annotation);
 			System.out.println(annotation.color());
 		}
 	}
