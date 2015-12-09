@@ -31,7 +31,7 @@ public class BaseTest
 	public void beforeTest() throws Exception
 	{
 		ApplicationContext ac = new ClassPathXmlApplicationContext("spring-config-hibernate.xml");
-		LocalSessionFactoryBean sessionFactory = (LocalSessionFactoryBean) ac.getBean(LocalSessionFactoryBean.class);
+		LocalSessionFactoryBean sessionFactory = (LocalSessionFactoryBean) ac.getBean(null, LocalSessionFactoryBean.class);
 		session = sessionFactory.getObject().openSession();
 //		session.beginTransaction();
 	}

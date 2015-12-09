@@ -31,7 +31,7 @@ public class BaseTest
 	public void beforeTest() throws Exception
 	{
 		ApplicationContext ac = new ClassPathXmlApplicationContext("spring-config-mybatis.xml");
-		SqlSessionFactoryBean sessionFactory = (SqlSessionFactoryBean) ac.getBean(SqlSessionFactoryBean.class);
+		SqlSessionFactoryBean sessionFactory = (SqlSessionFactoryBean) ac.getBean(null, SqlSessionFactoryBean.class);
 		session = sessionFactory.getObject().openSession();
 	}
 	
