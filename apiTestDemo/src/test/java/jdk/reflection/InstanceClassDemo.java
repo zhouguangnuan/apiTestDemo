@@ -15,9 +15,9 @@ public class InstanceClassDemo {
 	/**
 	 * 描述：静态方式
 	 * 特点:
-     * 	1.类的加载跟创建同步进行，不可分离。
-     *	2.需要知道类名，通过类名去声明变量，和完成new的动作
-     *	3.new的动作实现了类的加载和创建
+	 * 	1.类的加载跟创建同步进行，不可分离。
+	 *	2.需要知道类名，通过类名去声明变量，和完成new的动作
+	 *	3.new的动作实现了类的加载和创建
 	 */
 	@Test
 	public void test1() throws Exception
@@ -29,9 +29,9 @@ public class InstanceClassDemo {
 	/**
 	 * 描述：动态方式
 	 * 特点:
-     * 	1.类的加载跟创建步骤分离了
-     * 	2.可以通过传参的方式，加载指定绝对路径名的类，便返回该类
-     *	3.需要实例化该类时，可以随时调用该类的newInstance()方法创建
+	 * 	1.类的加载跟创建步骤分离了
+	 * 	2.可以通过传参的方式，加载指定绝对路径名的类，便返回该类
+	 *	3.需要实例化该类时，可以随时调用该类的newInstance()方法创建
 	 */
 	@Test
 	public void test2() throws Exception

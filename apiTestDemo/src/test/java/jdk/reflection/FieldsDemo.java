@@ -75,7 +75,6 @@ public class FieldsDemo {
 //			Object value = field.get(fieldName);
 			Object value = field.get(fieldName);
 			
-			
 			System.out.println("fieldName：" + fieldName);
 			System.out.println("fieldType：" + fieldType);
 			System.out.println(fieldName + "：" + value);
@@ -84,6 +83,9 @@ public class FieldsDemo {
 //			System.out.println("isAccessible()：" + field.isAccessible());
 //			System.out.println("isSynthetic()：" + field.isSynthetic());
 		}
+		fields[0].set(null, "222");
+		
+		System.out.println(Constant.CONST_01);
 	}
 	
 	@Test

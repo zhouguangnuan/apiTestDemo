@@ -19,14 +19,17 @@ package jdk.reflection;
  */
 class Constant
 {
-	public static final String CONST_01 = "常量1";
-	public static final String CONST_02 = "常量2";
-	public static final String CONST_03 = "常量3";
-	public static final String CONST_04 = "常量4";
-	public static final String CONST_05 = "常量5";
-	
-	
-	
+//	public static final String CONST_01 = "常量1";
+//	public static final String CONST_02 = "常量2";
+//	public static final String CONST_03 = "常量3";
+//	public static final String CONST_04 = "常量4";
+//	public static final String CONST_05 = "常量5";
+        
+	public static String CONST_01 = "常量1";
+	public static String CONST_02 = "常量2";
+	public static String CONST_03 = "常量3";
+	public static String CONST_04 = "常量4";
+	public static String CONST_05 = "常量5";
 }
 
 

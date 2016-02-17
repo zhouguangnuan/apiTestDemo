@@ -7,6 +7,8 @@ import java.util.Properties;
 import org.junit.Test;
 import org.springframework.util.NumberUtils;
 
+import com.alibaba.fastjson.JSON;
+
 @SuppressWarnings("all")
 public class PropertiesConfigurationTest
 {
@@ -43,12 +45,19 @@ public class PropertiesConfigurationTest
 	@Test
 	public void test2() throws Exception
 	{
-		// 设置默认分隔符
+		// 设置默认分隔符【默认是 ","】
 		AbstractConfiguration.setDefaultListDelimiter('/');  
 		Configuration config = new PropertiesConfiguration("test.properties");  
-		String[] keys=config.getStringArray("keys2");  
-		List key2=config.getList("keys2");  
-		System.out.println();
+		String[] keys1_array = config.getStringArray("keys1");  
+		List key1_list = config.getList("keys1");  
+		
+		String[] keys2_array = config.getStringArray("keys2");  
+                List key2_list = config.getList("keys2");  
+                
+		System.out.println("keys1_array：" + JSON.toJSONString(keys1_array));
+		System.out.println("key1_list：" + JSON.toJSONString(key1_list));
+		System.out.println("keys2_array：" + JSON.toJSONString(keys2_array));
+		System.out.println("key2_list：" + JSON.toJSONString(key2_list));
 	}
 	
 	@Test
@@ -74,6 +83,6 @@ public class PropertiesConfigurationTest
 	{
 		PropertiesConfiguration config = new PropertiesConfiguration("test.properties");    
 		config.setProperty("id2222", "sss22333");  
-        config.save();  
+		config.save();  
 	}
 }

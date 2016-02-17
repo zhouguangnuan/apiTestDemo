@@ -10,11 +10,11 @@ import java.io.File;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
+import com.alibaba.fastjson.serializer.SerializerFeature;
+
 import bean.BeanFactory;
 import bean.SampleBean;
-
-import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.singno.utils.PathUtils;
+import bean.SampleBean2;
 
 /**
  * <p>File：JSON_Test.java</p>
@@ -62,4 +62,13 @@ public class JSON_Test
 		SampleBean sampleBean = JSON.parseObject(input, SampleBean.class);
 		System.out.println(sampleBean);
 	}
+	
+	@Test
+        public void testToJSONString2() throws Exception
+        {
+                SampleBean2 object = BeanFactory.getSampleBean2();
+                // 禁用循环引用检测
+                String jsonStr = JSON.toJSONString(object, SerializerFeature.DisableCircularReferenceDetect);
+                System.out.println(jsonStr);
+        }
 }

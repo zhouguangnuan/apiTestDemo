@@ -5,6 +5,9 @@
  */
 package org.joda.time;
 
+import static org.junit.Assert.*;
+
+import org.apache.commons.lang3.time.DateFormatUtils;
 import org.joda.time.format.DateTimeFormat;
 import org.junit.Test;
 
@@ -36,7 +39,6 @@ public class DateTime_Time
 		System.out.println(dateTime.toDate().getTime());// 1422321000000
 		System.out.println(dateTime.toString("yyyy-MM-dd HH:mm:ss"));// 2015-01-27 09:10:00
 	}
-	
 	
 	/**
 	 * 加减(年、月、星期、日、小时、分、秒)修改日期
@@ -97,4 +99,10 @@ public class DateTime_Time
 		// 修改当前日期（时间毫秒）为当天的第几毫秒
 		System.out.println(dateTime.withMillisOfDay(1).toString("yyyy-MM-dd HH:mm:ss"));// 2015-01-27 00:00:00 0001
 	}
+	
+	@Test
+        public void testName() throws Exception
+        {
+                System.out.println(DateFormatUtils.format(1450334706350L, "yyyy-MM-dd HH:mm:ss"));
+        }
 }
