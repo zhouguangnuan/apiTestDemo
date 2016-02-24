@@ -69,12 +69,11 @@ public class FieldsDemo {
 		Class clazz = Constant.class;
 		
 		Field[] fields = clazz.getDeclaredFields();
+		Object obj = clazz.newInstance();
 		for (Field field : fields) { 
 			String fieldName = field.getName(); //　获得成员变量名
 			Class fieldType = field.getType(); // 获得成员变量的类型
-//			Object value = field.get(fieldName);
-			Object value = field.get(fieldName);
-			
+			Object value = field.get(obj);// 传入对象
 			
 			System.out.println("fieldName：" + fieldName);
 			System.out.println("fieldType：" + fieldType);
@@ -84,6 +83,9 @@ public class FieldsDemo {
 //			System.out.println("isAccessible()：" + field.isAccessible());
 //			System.out.println("isSynthetic()：" + field.isSynthetic());
 		}
+		fields[0].set(null, "222");
+		
+		System.out.println(Constant.CONST_01);
 	}
 	
 	@Test

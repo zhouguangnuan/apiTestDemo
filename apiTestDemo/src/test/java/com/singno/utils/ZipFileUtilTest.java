@@ -7,6 +7,7 @@ import java.io.InputStream;
 import org.apache.commons.compress.archivers.ArchiveEntry;
 import org.apache.commons.compress.archivers.zip.ZipArchiveInputStream;
 import org.apache.commons.io.output.ByteArrayOutputStream;
+import org.apache.commons.lang3.CharEncoding;
 import org.junit.Test;
 
 import com.google.common.base.Charsets;
@@ -56,17 +57,18 @@ public class ZipFileUtilTest
 			{
 				is = new FileInputStream(file);
 				zais = new ZipArchiveInputStream(is);
-				ArchiveEntry archiveEntry = null;
+				os = new ByteArrayOutputStream();
 				
-				while (null != (archiveEntry = zais.getNextEntry()))
+				while (null != zais.getNextEntry())
 				{
-					byte[] content = new byte[(int) archiveEntry.getSize()];
-					zais.read(content);
-					os = new ByteArrayOutputStream();
-					os.write(content);
+				        int b;
+				        while ((b =  zais.read()) != -1)
+                                        {
+	                                        os.write(b);
+                                        }
 				}
 				
-				System.out.println(new String(os.toByteArray(), Charsets.UTF_8));
+				System.out.println(new String(os.toByteArray(), "GBK"));
 			} catch (Exception e)
 			{
 				e.printStackTrace();

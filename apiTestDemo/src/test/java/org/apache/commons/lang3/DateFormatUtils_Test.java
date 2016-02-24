@@ -46,5 +46,11 @@ public class DateFormatUtils_Test
 
         sw.stop();  
         System.out.println("秒表计时（毫秒）:" + sw.getTime());  
+        
+        System.out.println(DateFormatUtils.format(new Date().getTime(), "yyyy年MM月"));
+        
+        System.out.println(DateFormatUtils.format(new Date(1454083200), "yyyy年MM月"));
+        System.out.println(DateFormatUtils.format(new Date(), "yyyy年MM月"));
+        System.out.println(new Date().getTime());
 	}
 }
