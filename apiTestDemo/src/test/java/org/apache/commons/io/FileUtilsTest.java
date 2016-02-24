@@ -20,6 +20,7 @@ import java.util.List;
 import org.apache.commons.io.filefilter.IOFileFilter;
 import org.apache.commons.lang3.CharEncoding;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.tools.ant.filters.StringInputStream;
 import org.joda.time.DateTime;
 import org.junit.Test;
 
@@ -224,7 +225,7 @@ public class FileUtilsTest
 	 * 列表指定路径下的所有文件（不包括文件夹）
 	 * File 			directory		列表的目录路径
 	 * IOFileFilter 	fileFilter		必填，过滤查询所需文件
-     * IOFileFilter 	dirFilter		选填，过滤所需查询的子目录（null时不查询子目录）
+	 * IOFileFilter 	dirFilter		选填，过滤所需查询的子目录（null时不查询子目录）
 	 * @throws Exception
 	 * @author 周光暖
 	 */
@@ -245,7 +246,7 @@ public class FileUtilsTest
 	 * 列表指定路径下的所有文件（包括文件夹）
 	 * File 			directory		列表的目录路径
 	 * IOFileFilter 	fileFilter		必填，过滤查询所需文件
-     * IOFileFilter 	dirFilter		选填，过滤所需查询的子目录（null时不查询子目录）
+	 * IOFileFilter 	dirFilter		选填，过滤所需查询的子目录（null时不查询子目录）
 	 * @throws Exception
 	 * @author 周光暖
 	 */
@@ -474,8 +475,8 @@ public class FileUtilsTest
 	public void test_readFileToString() throws Exception
 	{
 		System.out.println(FileUtils.readFileToString(FileUtils.getFile(filename6)));
-		System.out.println(FileUtils.readFileToString(FileUtils.getFile(filename6), Charsets.UTF_8));
-		System.out.println(FileUtils.readFileToString(FileUtils.getFile(filename6), CharEncoding.UTF_8));
+//		System.out.println(FileUtils.readFileToString(FileUtils.getFile(filename6), Charsets.UTF_8));
+//		System.out.println(FileUtils.readFileToString(FileUtils.getFile(filename6), CharEncoding.UTF_8));
 	}
 
 	/**

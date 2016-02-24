@@ -74,6 +74,6 @@ public class PropertiesConfigurationTest
 	{
 		PropertiesConfiguration config = new PropertiesConfiguration("test.properties");    
 		config.setProperty("id2222", "sss22333");  
-        config.save();  
+		config.save();  
 	}
 }
