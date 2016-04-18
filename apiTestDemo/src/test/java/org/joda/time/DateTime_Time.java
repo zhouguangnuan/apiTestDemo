@@ -38,6 +38,10 @@ public class DateTime_Time
 		dateTime = DateTime.parse("2015-01-27 09:10:00", DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss"));
 		System.out.println(dateTime.toDate().getTime());// 1422321000000
 		System.out.println(dateTime.toString("yyyy-MM-dd HH:mm:ss"));// 2015-01-27 09:10:00
+		
+		
+		DateTime DateTime = org.joda.time.DateTime.now();
+		
 	}
 	
 	/**

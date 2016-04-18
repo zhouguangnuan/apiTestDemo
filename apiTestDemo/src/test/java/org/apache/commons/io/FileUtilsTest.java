@@ -5,6 +5,8 @@
  */
 package org.apache.commons.io;
 
+import static org.junit.Assert.*;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -520,8 +522,8 @@ public class FileUtilsTest
 	@Test
 	public void test_writeStringToFile() throws Exception
 	{
-		String data = "gfdgfgfgfg";
-		File directory = FileUtils.getFile(filename1);
+		String data = "中国";
+		File directory = FileUtils.getFile("C:/Users/Administrator/Desktop/test.json");
 		FileUtils.writeStringToFile(directory, data, CharEncoding.UTF_8);
 	}
 
@@ -662,5 +664,4 @@ public class FileUtilsTest
 		byte[] bytest =  IOUtils.toByteArray(url.openStream());
 		new FileOutputStream("C:\\Users\\Administrator\\Desktop\\ss.jpg").write(bytest);
 	}
-	
 }
