@@ -1,7 +1,7 @@
 /**   
  * @Title: HeartBeatServerHandler.java 
  * @Package com.underdark.March 
- * @Description: TODO(用一句话描述该文件做什么) 
+ * @Description:  
  * @author Minsc Wang ys2b7_hotmail_com   
  * @date 2010-3-14 下午02:50:40 
  * @version V0.9.0 

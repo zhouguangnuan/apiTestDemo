@@ -49,6 +49,7 @@ public class DateTime_Time
 	public void testPlus() throws Exception
 	{
 		DateTime dateTime = DateTime.parse("2015-01-27");
+		System.out.println(dateTime.plusMinutes(-30).toString("yyyy-MM-dd HH:mm:ss"));// 2015-01-26 23:30:00
 		System.out.println(dateTime.plusYears(1).toString("yyyy-MM-dd HH:mm:ss"));// 2016-01-27 00:00:00
 		System.out.println(dateTime.plusMonths(1).toString("yyyy-MM-dd HH:mm:ss"));// 2015-02-27 00:00:00
 		System.out.println(dateTime.plusWeeks(1).toString("yyyy-MM-dd HH:mm:ss"));// 2015-02-03 00:00:00
@@ -70,7 +71,6 @@ public class DateTime_Time
 		
 		// 获得当天日期，开始时间的 dateTime 
 		System.out.println(dateTime.withTimeAtStartOfDay().toString("yyyy-MM-dd HH:mm:ss"));// 2015-01-27 00:00:00
-		
 		
 		// 修改当前日期（年份）
 		System.out.println(dateTime.withYear(2013).toString("yyyy-MM-dd HH:mm:ss"));// 2013-01-27 09:10:00
