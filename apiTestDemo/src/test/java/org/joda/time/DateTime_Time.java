@@ -9,6 +9,8 @@ import static org.junit.Assert.*;
 
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+import org.joda.time.format.DateTimeFormatterBuilder;
 import org.junit.Test;
 
 /**
@@ -30,6 +32,10 @@ public class DateTime_Time
 	@Test
 	public void testParse() throws Exception
 	{
+		System.out.println(DateTime.parse("2016-07-01 00:00:00", DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss")).toDate().getTime());
+		// 1466438400000
+		// 1466438400
+		
 		// 格式 默认是：yyyy-MM-dd
 		DateTime dateTime = DateTime.parse("2015-01-27");
 		System.out.println(dateTime.toDate().getTime());// 1422288000000
@@ -38,6 +44,9 @@ public class DateTime_Time
 		dateTime = DateTime.parse("2015-01-27 09:10:00", DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:ss"));
 		System.out.println(dateTime.toDate().getTime());// 1422321000000
 		System.out.println(dateTime.toString("yyyy-MM-dd HH:mm:ss"));// 2015-01-27 09:10:00
+		
+		DateTime s = DateTime.parse("2016-05", DateTimeFormat.forPattern("yyyy-MM"));
+		System.out.println(s.toString("yyyy-MM-dd"));
 	}
 	
 	/**
@@ -101,8 +110,15 @@ public class DateTime_Time
 	}
 	
 	@Test
-        public void testName() throws Exception
-        {
-                System.out.println(DateFormatUtils.format(1450334706350L, "yyyy-MM-dd HH:mm:ss"));
-        }
+    public void testName() throws Exception
+    {
+		String dateStr = "2016-05";
+		DateTime date = DateTime.parse(dateStr, DateTimeFormat.forPattern("yyyy-MM"));
+		System.out.println(date.toString("yyyy-MM-dd HH:mm:ss"));
+		date = date.plusMonths(1).plusSeconds(-1);
+		System.out.println(date.toString("yyyy-MM-dd HH:mm:ss"));
+		
+//		2016-05-01 00:00:00
+//		2016-05-31 23:59:59
+    }
 }

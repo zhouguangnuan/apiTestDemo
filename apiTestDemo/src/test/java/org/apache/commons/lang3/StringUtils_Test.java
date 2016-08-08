@@ -87,7 +87,7 @@ public class StringUtils_Test
 	public void testAbbreviateMiddle() throws Exception
 	{
 		String str = "15669108193";
-		System.out.println(StringUtils.abbreviateMiddle(str, "****", 10));// 中华...
+		System.out.println(StringUtils.abbreviateMiddle(str, "****", 10));// 156****193
 	}
 	
 	/**
