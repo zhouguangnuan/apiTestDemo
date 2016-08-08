@@ -47,6 +47,8 @@ public class DateTime_Time
 		
 		DateTime s = DateTime.parse("2016-05", DateTimeFormat.forPattern("yyyy-MM"));
 		System.out.println(s.toString("yyyy-MM-dd"));
+		
+		DateTime DateTime = org.joda.time.DateTime.now();
 	}
 	
 	/**
