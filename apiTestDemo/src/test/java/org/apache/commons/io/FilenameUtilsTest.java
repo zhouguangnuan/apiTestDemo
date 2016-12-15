@@ -64,7 +64,8 @@ public class FilenameUtilsTest
 	public void test_getBaseName()
 	{
 		// testFile
-		System.out.println("getBaseName：" + FilenameUtils.getBaseName(fullFilename));
+		System.out.println("getBaseName：" + FilenameUtils.getBaseName("http://localhost:8880/static/img/activity1/577BC6AA80DC4F818EBEA539D30DB494.jpg"));
+//		System.out.println("getBaseName：" + FilenameUtils.getBaseName(fullFilename));
 	}
 
 	/**
