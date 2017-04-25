@@ -7,10 +7,7 @@ package org.joda.time;
 
 import static org.junit.Assert.*;
 
-import org.apache.commons.lang3.time.DateFormatUtils;
 import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
-import org.joda.time.format.DateTimeFormatterBuilder;
 import org.junit.Test;
 
 /**
@@ -50,6 +47,40 @@ public class DateTime_Time
 		
 		DateTime DateTime = org.joda.time.DateTime.now();
 	}
+	
+	@Test
+	public void testName11() throws Exception {
+//		System.out.println(DateTime.parse("2016-03-31", DateTimeFormat.forPattern("yyyy-MM-dd")).plusMonths(-1).toString("yyyy-MM-dd"));
+//		System.out.println(DateTime.now().getDayOfWeek());
+		
+		
+		
+		
+//		System.out.println(aa(DateTime.parse("2017-01-02", DateTimeFormat.forPattern("yyyy-MM-dd"))));
+//		System.out.println(aa(DateTime.parse("2017-01-03", DateTimeFormat.forPattern("yyyy-MM-dd"))));
+//		System.out.println(aa(DateTime.parse("2017-01-04", DateTimeFormat.forPattern("yyyy-MM-dd"))));
+//		System.out.println(aa(DateTime.parse("2017-01-05", DateTimeFormat.forPattern("yyyy-MM-dd"))));
+//		System.out.println(aa(DateTime.parse("2017-01-06", DateTimeFormat.forPattern("yyyy-MM-dd"))));
+//		System.out.println(aa(DateTime.parse("2017-01-07", DateTimeFormat.forPattern("yyyy-MM-dd"))));
+//		System.out.println(aa(DateTime.parse("2017-01-08", DateTimeFormat.forPattern("yyyy-MM-dd"))));
+		
+		System.out.println(DateTime.parse("2016-01-11", DateTimeFormat.forPattern("yyyy-MM-dd")).getWeekOfWeekyear());
+	}
+	
+	public static Boolean aa(DateTime dateTime){
+		
+		
+		
+		
+		return null;
+	}
+	
+	@Test
+	public void testName55() throws Exception {
+		System.out.println(3%3);
+	}
+	
+	
 	
 	/**
 	 * 加减(年、月、星期、日、小时、分、秒)修改日期

@@ -5,16 +5,21 @@
  */
 package com.alibaba.fastjson;
 
+import static org.junit.Assert.*;
+
 import java.io.File;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.google.common.collect.Lists;
 
 import bean.BeanFactory;
 import bean.SampleBean;
 import bean.SampleBean2;
+import bean.User;
 
 /**
  * <p>File：JSON_Test.java</p>
@@ -64,11 +69,30 @@ public class JSON_Test
 	}
 	
 	@Test
-        public void testToJSONString2() throws Exception
-        {
-                SampleBean2 object = BeanFactory.getSampleBean2();
-                // 禁用循环引用检测
-                String jsonStr = JSON.toJSONString(object, SerializerFeature.DisableCircularReferenceDetect);
-                System.out.println(jsonStr);
-        }
+    public void testToJSONString2() throws Exception
+    {
+        SampleBean2 object = BeanFactory.getSampleBean2();
+        // 禁用循环引用检测
+        String jsonStr = JSON.toJSONString(object, SerializerFeature.DisableCircularReferenceDetect);
+        System.out.println(jsonStr);
+    }
+	
+	@Test
+	public void testName() throws Exception {
+		List<User> list = Lists.newArrayList();
+		for(int i=0;i<10;i++){
+			list.add(new User(i, "singno"+i));
+		}
+		
+		System.out.println(list.contains(new User(1, "singno1")));
+	}
+	
+	@Test
+	public void testName2() throws Exception {
+		// 格式化日期
+		JSON.DEFFAULT_DATE_FORMAT = "yyyy-MM-dd";
+		SampleBean2 object = BeanFactory.getSampleBean2();
+		String jsonStr = JSON.toJSONString(object, SerializerFeature.WriteDateUseDateFormat, SerializerFeature.DisableCircularReferenceDetect);
+		System.out.println(jsonStr);
+	}
 }

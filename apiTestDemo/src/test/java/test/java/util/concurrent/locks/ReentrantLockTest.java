@@ -1,7 +1,6 @@
 package test.java.util.concurrent.locks;
 
-import static org.junit.Assert.*;
-
+import java.math.BigDecimal;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -37,7 +36,7 @@ public class ReentrantLockTest {
         new Thread("Thread2"){  
             @Override  
             public void run() {  
-        		lock.lock();					
+        		lock.lock();
         		try {
         			System.out.println("22222222222");
         		}
@@ -56,5 +55,10 @@ public class ReentrantLockTest {
 		lock = new ReentrantLock();
 		ReentrantLock previousLock = lockMap.putIfAbsent(key, lock);
 		return previousLock == null ? lock : previousLock;
+	}
+	
+	@Test
+	public void testName() throws Exception {
+		System.out.println(BigDecimal.valueOf(0.5));
 	}
 }

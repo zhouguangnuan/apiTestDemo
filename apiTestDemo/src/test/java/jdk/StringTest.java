@@ -1,6 +1,12 @@
 package jdk;
 
+import java.util.HashMap;
+import java.util.concurrent.atomic.AtomicReference;
+
 import org.junit.Test;
+
+import com.google.common.collect.Maps;
+
 
 public class StringTest
 {

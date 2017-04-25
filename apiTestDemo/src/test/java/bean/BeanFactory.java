@@ -53,30 +53,30 @@ public class BeanFactory
 	}
 	
 	public static SampleBean2 getSampleBean2()
-        {
-                String[] array = new String[]{"array1", "array2", "array3"};
-                List<String> list = Arrays.asList("list1", "list2", "list3");
-                List<String> infos = Arrays.asList("infos1", "infos2", "infos3");
-                Map<String, String>     map = new HashMap<String, String>();
-                map.put("map1", "val1");
-                map.put("map2", "val2");
-                map.put("map3", "val3");
-                
-                NestedBean nestedBean = new NestedBean();
-                nestedBean.setNestedProperty("nestedProperty");
-                nestedBean.setInfos(infos);
-                
-                List<NestedBean> beans = Arrays.asList(nestedBean, nestedBean, nestedBean);
-                
-                SampleBean2 bean = new SampleBean2();
-                bean.setName("rensanning");
-                bean.setAge(31);
-                bean.setDate(new Date());
-                bean.setArray(array);
-                bean.setList(list);
-                bean.setMap(map);
-                bean.setBeans(beans);
-                 
-                return bean;
-        }
+    {
+            String[] array = new String[]{"array1", "array2", "array3"};
+            List<String> list = Arrays.asList("list1", "list2", "list3");
+            List<String> infos = Arrays.asList("infos1", "infos2", "infos3");
+            Map<String, String>     map = new HashMap<String, String>();
+            map.put("map1", "val1");
+            map.put("map2", "val2");
+            map.put("map3", "val3");
+            
+            NestedBean nestedBean = new NestedBean();
+            nestedBean.setNestedProperty("nestedProperty");
+            nestedBean.setInfos(infos);
+            
+            List<NestedBean> beans = Arrays.asList(nestedBean, nestedBean, nestedBean);
+            
+            SampleBean2 bean = new SampleBean2();
+            bean.setName("rensanning");
+            bean.setAge(31);
+            bean.setDate(new Date());
+            bean.setArray(array);
+            bean.setList(list);
+            bean.setMap(map);
+            bean.setBeans(beans);
+             
+            return bean;
+    }
 }
