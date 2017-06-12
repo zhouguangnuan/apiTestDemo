@@ -5,7 +5,7 @@
  */
 package org.joda.time;
 
-import static org.junit.Assert.*;
+import java.util.Date;
 
 import org.joda.time.format.DateTimeFormat;
 import org.junit.Test;
