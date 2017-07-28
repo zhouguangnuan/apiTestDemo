@@ -25,7 +25,8 @@ public class MultiFormatWriterTest {
 	
 	@Test
 	public void encode() throws Exception {
-		String content = "http://www.nbzhwj.cn/m/c?c=41954568160627067323@2016-07-01";
+//		String content = "http://www.nbzhwj.cn/m/c?c=41954568160627067323@2016-07-01";
+		String content = "http://weixin.qq.com/q/Vjq0KePmfYcE4D9upxKe";
 		String filepath = "C://Users//Administrator//Desktop//test5.jpg";
 		int width = 100;
 		int height = 100;
@@ -39,9 +40,10 @@ public class MultiFormatWriterTest {
 	
 	@Test
 	public void decode() throws Exception {
-		String filepath = "C://Users//Administrator//Desktop//55555.jpg";
-//		BufferedImage bufferedImage = ImageIO.read(new FileInputStream(filepath));
-		BufferedImage bufferedImage = ImageIO.read(new URL("http://wap.xbcare.com.cn/static/img/HIOVOo4Wj4iIXe0i54Wmtb-J87F9lzOF5BYz7GfrKCNHE2KMv1Co9wN9PbUz6Hw5.jpg"));
+//		String filepath = "C://Users//Administrator//Desktop//55555.jpg";
+		String filepath = "C://Users//Administrator//Desktop//test5555.jpg";
+		BufferedImage bufferedImage = ImageIO.read(new FileInputStream(filepath));
+//		BufferedImage bufferedImage = ImageIO.read(new URL("http://wap.xbcare.com.cn/static/img/HIOVOo4Wj4iIXe0i54Wmtb-J87F9lzOF5BYz7GfrKCNHE2KMv1Co9wN9PbUz6Hw5.jpg"));
 		LuminanceSource source = new BufferedImageLuminanceSource(bufferedImage);
 		Binarizer binarizer = new HybridBinarizer(source);
 		BinaryBitmap bitmap = new BinaryBitmap(binarizer);
